@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soil Smart</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-sidebar">
+        <div class="side-menu sidebar-sections">
+          <div class="top">
+            <div class="logo-wrapper">
+              <a href="/" class="logo">
+                <i class="bx bxs-leaf"></i>
+              </a>
+            </div>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href=""><i class="bx bxs-message-square-dots"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bx bxs-group"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="bx bxs-cog"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Chat-history sidebar-sections">
+          <div class="top-history">
+            <!-- Search and new message button -->
+            <div class="search-wrapper">
+              <input type="text" placeholder="Search" />
+              <i class="bx bx-search"></i>
+            </div>
+
+            <button class="new-message-btn"><i class="bx bxs-edit"></i></button>
+          </div>
+
+          <div class="chat-history">
+            <h6>Previous Chats</h6>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <!-- <div class="top">top</div> -->
+        <div class="chats-wrapper"><div id="response"></div></div>
+        <div class="chat-input-section">
+          <div class="input-wrapper">
+            <form
+              id="chat-form"
+              action="/chat"
+              method="POST"
+              enctype="application/json"
+            >
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                placeholder="Type something..."
+                name="message"
+              ></textarea>
+              <button type="submit" id="submit" class="send-btn">
+                <i class="bx bxs-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="right-sidebar">Trending</div>
+    </div>
+
+    <script type="module" src="chat.js"></script>
+  </body>
+</html>
