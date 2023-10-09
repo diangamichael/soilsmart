@@ -1,6 +1,7 @@
 const form = document.getElementById("chat-form");
 const responseDiv = document.getElementById("response");
 const chatsWrapper = document.querySelector(".chats-wrapper");
+const welcomeMessage = document.querySelector(".welcome-message");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -9,7 +10,10 @@ form.addEventListener("submit", async (event) => {
   const messageElement = document.createElement("div");
   messageElement.classList.add("message-sent", "message");
   messageElement.textContent = userInput;
+  // hide welcome message
+  welcomeMessage.style.display = "none";
   chatsWrapper.appendChild(messageElement);
+  event.target.elements.message.value = "";
 
   // const response = await fetch("/chat", {
   //   method: "POST",
