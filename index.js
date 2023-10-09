@@ -24,7 +24,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-  const filePath = path.join(__dirname, "app/chat/chat.html");
+  const filePath = path.join(__dirname, "app/index.html");
   res.sendFile(filePath);
 });
 

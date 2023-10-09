@@ -54,9 +54,12 @@
       </div>
       <div class="main">
         <!-- <div class="top">top</div> -->
-        <div class="chats-wrapper"><div id="response"></div></div>
+        <div class="chats-wrapper">
+          <div id="response"></div>
+        </div>
         <div class="chat-input-section">
           <div class="input-wrapper">
+            <!-- <div class="form"> -->
             <form
               id="chat-form"
               action="/chat"
@@ -64,22 +67,22 @@
               enctype="application/json"
             >
               <textarea
-                name=""
-                id=""
-                cols="30"
-                placeholder="Type something..."
+                class="user-input"
                 name="message"
+                placeholder="Write your question..."
+                auttofocus="true"
               ></textarea>
               <button type="submit" id="submit" class="send-btn">
                 <i class="bx bxs-send"></i>
               </button>
             </form>
+            <!-- </div> -->
           </div>
         </div>
       </div>
       <div class="right-sidebar">Trending</div>
     </div>
 
-    <script type="module" src="../test.js"></script>
+    <script type="module" src="test.js"></script>
   </body>
 </html>

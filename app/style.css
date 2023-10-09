@@ -179,34 +179,62 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #f2fffa;
 }
 
 .input-wrapper {
-  background-color: #f2f3f5;
+  background-color: #fff;
   width: 100%;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   outline: none;
+  max-height: 50px !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.input-wrapper textarea {
+form {
+  width: 100%;
+}
+
+.user-input {
   width: calc(100% - 50px) !important;
   border: none;
   background: transparent;
+  outline: none;
+  border-radius: inherit;
+  font-size: 13px;
+  color: #000;
+  resize: none;
+  height: 100%;
+  padding: 10px;
+  height: 40px;
 }
 
 .send-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   background: transparent;
   color: #34eb9e;
   border: none;
   outline: none;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 10px;
+}
+
+.send-btn i {
+  font-size: 25px;
+}
+
+.message {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.message-sent {
+  background-color: #fdfeff;
 }
