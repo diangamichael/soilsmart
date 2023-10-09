@@ -2,17 +2,40 @@ const form = document.getElementById("chat-form");
 const responseDiv = document.getElementById("response");
 const chatsWrapper = document.querySelector(".chats-wrapper");
 const welcomeMessage = document.querySelector(".welcome-message");
+const suggestedInputs = document.querySelectorAll(".suggested-btn");
+
+// Handle suggested input clicks
+suggestedInputs.forEach((suggestedInput) => {
+  suggestedInput.addEventListener("click", () => {
+    const suggestedText = suggestedInput.textContent;
+    form.elements.message.value = suggestedText;
+    // submit form
+    form.dispatchEvent(new Event("submit"));
+  });
+});
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const userInput = event.target.elements.message.value;
+
+  // create message container
+  const messageContainer = document.createElement("div");
+  messageContainer.classList.add("message-container");
+  const messageImage = document.createElement("img");
+  messageImage.src = "../assets/images/llama.png";
+  messageImage.classList.add("message-image");
+  messageContainer.appendChild(messageImage);
+
+  // create message element
   const messageElement = document.createElement("div");
   messageElement.classList.add("message-sent", "message");
   messageElement.textContent = userInput;
+  messageContainer.appendChild(messageElement);
+
   // hide welcome message
   welcomeMessage.style.display = "none";
-  chatsWrapper.appendChild(messageElement);
+  chatsWrapper.appendChild(messageContainer);
   event.target.elements.message.value = "";
 
   // const response = await fetch("/chat", {
