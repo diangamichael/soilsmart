@@ -3,6 +3,8 @@ const responseDiv = document.getElementById("response");
 const chatsWrapper = document.querySelector(".chats-wrapper");
 const welcomeMessage = document.querySelector(".welcome-message");
 const suggestedInputs = document.querySelectorAll(".suggested-btn");
+const _userImage = "../assets/images/user.jpg";
+const _botImage = "../assets/images/bot.png";
 
 // Handle suggested input clicks
 suggestedInputs.forEach((suggestedInput) => {
@@ -23,15 +25,15 @@ form.addEventListener("submit", async (event) => {
   const messageContainer = document.createElement("div");
   messageContainer.classList.add("message-container");
   const messageImage = document.createElement("img");
-  messageImage.src = "../assets/images/llama.png";
+  messageImage.src = _userImage;
   messageImage.classList.add("message-image");
-  messageContainer.appendChild(messageImage);
 
   // create message element
   const messageElement = document.createElement("div");
   messageElement.classList.add("message-sent", "message");
   messageElement.textContent = userInput;
   messageContainer.appendChild(messageElement);
+  messageContainer.appendChild(messageImage);
 
   // hide welcome message
   welcomeMessage.style.display = "none";

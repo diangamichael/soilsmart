@@ -17,7 +17,8 @@ const __dirname = dirname(__filename);
 app.use(express.json());
 
 // Serve static files (including text.js)
-app.use(express.static("app"));
+app.use(express.static(path.join(__dirname, "app")));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 app.listen(port, () => {
   console.log(`Server is running on port http://localhost:${port}`);
