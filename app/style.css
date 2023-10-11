@@ -52,6 +52,7 @@ body {
   right: 0;
   z-index: 100;
   padding: 20px;
+  padding-right: 10px;
   border-left: 1px solid #f2f3f5;
 }
 
@@ -289,16 +290,13 @@ form {
 }
 
 .suggested-btn {
-  width: max-content;
-  height: 40px;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #9afdd4;
-  color: #000;
+  background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 10px;
+  width: 100%;
+  text-align: left;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .welcome-message h1 {
@@ -420,4 +418,18 @@ form {
   outline: none;
   cursor: pointer;
   margin-top: 40px;
+}
+
+.question {
+  padding: 10px;
+  border-bottom: 1px solid #9afdd4;
+}
+
+
+
+.questions-container {
+  height: calc(100% - 60px);
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 20px;
 }
