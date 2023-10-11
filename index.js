@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import EventSource from "eventsource";
 const apiToken = dotenv.config();
 import ReplicateResponseHandler from "./app/utils/EngageUser.js";
+import MarkdownIt from "markdown-it";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ const __dirname = dirname(__filename);
 app.use(express.json());
 
 // Serve static files (including text.js)
+// app.use(express.static("app"));
 app.use(express.static(path.join(__dirname, "app")));
 app.use("/assets", express.static(path.join(__dirname, "assets")));
 
@@ -31,6 +33,7 @@ app.get("/", (req, res) => {
 
 app.post("/chat", async (req, res) => {
   const userInput = req.body.message;
+
   const replicateHandler = new ReplicateResponseHandler();
 
   const prediction = await replicateHandler.getResponse(userInput);

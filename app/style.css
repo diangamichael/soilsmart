@@ -8,7 +8,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 /* Track */
@@ -18,7 +18,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #c6d7fc;
 }
 
 /* Handle on hover */
@@ -175,9 +175,6 @@ body {
   overflow-y: auto;
   padding: 0 20px;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-direction: column-reverse;
 }
 
 .chat-input-section {
@@ -257,6 +254,10 @@ form {
   align-items: center;
 }
 
+.welcome-message h1 {
+  font-size: 30px !important;
+}
+
 .welcome-message-hide {
   display: none;
 }
@@ -298,7 +299,8 @@ form {
 
 .welcome-message h1 {
   margin-bottom: 20px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif !important;
+  font-weight: bold !important;
 }
 
 .welcome-message p {
@@ -318,8 +320,8 @@ form {
 }
 
 .message-image {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-right: 10px;
   margin-top: 20px;
@@ -329,4 +331,9 @@ form {
   background-color: #e0e0e0;
   padding: 10px;
   border-radius: 5px;
+}
+
+.message {
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
