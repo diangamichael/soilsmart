@@ -206,7 +206,7 @@ form {
 }
 
 .user-input {
-  width: calc(100% - 50px) !important;
+  width: calc(100% - 100px) !important;
   border: none;
   background: transparent;
   outline: none;
@@ -217,6 +217,10 @@ form {
   height: 100%;
   padding: 10px;
   height: 40px;
+}
+
+#attach {
+  color: gray !important;
 }
 
 .send-btn {
@@ -336,4 +340,84 @@ form {
 .message {
   font-size: 14px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#drop-area.highlight {
+  background-color: #f1f1f1;
+}
+
+.hidden {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 60px;
+  color: #9afdd4;
+}
+
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-wrapper p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 20px;
+}
+
+#fileInput {
+  visibility: hidden;
+}
+
+.upload-image-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #34eb9e;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.preview-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.preview-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border-radius: inherit;
+}
+
+.submit-image-btn {
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #9afdd4;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 40px;
 }
